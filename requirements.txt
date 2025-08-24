@@ -1,0 +1,6 @@
+click
+pyyaml
+requests
+loguru
+jinja2
+pytest
