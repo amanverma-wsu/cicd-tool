@@ -122,10 +122,3 @@ We welcome contributions from the community. To contribute:
 5. Open a Pull Request  
 
 ---
-
-## Author
-**Aman Verma**  
-Washington State University  
-
-- [GitHub](https://github.com/amanverma-wsu)  
-- [LinkedIn](https://www.linkedin.com/in/aman-verma-alpha/)
