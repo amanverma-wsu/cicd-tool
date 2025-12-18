@@ -4,7 +4,7 @@ A **Python CLI tool** that automatically generates GitHub Actions CI/CD workflow
 
 ---
 
-## 🎯 What It Does
+## What It Does
 
 Instead of manually writing 50+ line GitHub Actions workflow files for each project, define your configuration once in a simple YAML file and let CICD Tool generate everything automatically.
 
@@ -24,7 +24,7 @@ Instead of manually writing 50+ line GitHub Actions workflow files for each proj
 
 ---
 
-## ✨ Features
+## Features
 
 - **Generate Workflows** – Create GitHub Actions workflows from YAML config in seconds
 - **Preview Changes** – See diffs before applying with the `plan` command
@@ -36,7 +36,7 @@ Instead of manually writing 50+ line GitHub Actions workflow files for each proj
 
 ---
 
-## 📋 Quick Example
+## Quick Example
 
 **Input (`project.yaml`):**
 ```yaml
@@ -81,7 +81,7 @@ jobs:
 
 ---
 
-## 🛠️ CLI Commands
+## CLI Commands
 
 | Command | Description |
 |---------|-------------|
@@ -93,7 +93,7 @@ jobs:
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 - **Language:** Python 3.11+
 - **CLI Framework:** Click
@@ -106,7 +106,7 @@ jobs:
 
 ---
 
-## 🚀 Installation & Usage
+## Installation & Usage
 
 ### Prerequisites
 - Python 3.11+
@@ -160,7 +160,7 @@ python cli.py status --config project.yaml
 
 ---
 
-## 📊 Project Structure
+## Project Structure
 
 ```
 cicd-tool/
@@ -183,7 +183,7 @@ cicd-tool/
 
 ---
 
-## 🤖 Use as GitHub Action
+## Use as GitHub Action
 
 Use CICD Tool in your GitHub workflows:
 
@@ -201,7 +201,7 @@ Use CICD Tool in your GitHub workflows:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 All tests pass:
 
@@ -210,14 +210,14 @@ pytest tests/ -v
 ```
 
 **Test Coverage:**
-- ✅ Config loading and validation
-- ✅ Workflow generation and rendering
-- ✅ Diff detection (plan command)
-- ✅ Real workflow files against golden test fixture
+- Config loading and validation
+- Workflow generation and rendering
+- Diff detection (plan command)
+- Real workflow files against golden test fixture
 
 ---
 
-## 📚 Configuration Schema
+## Configuration Schema
 
 **Required fields in `project.yaml`:**
 
@@ -237,7 +237,7 @@ notifications:
 
 ---
 
-## 🌟 Use Cases
+## Use Cases
 
 - **Standardize** CI/CD across multiple projects
 - **Reduce** setup time per project (30-60 min saved)
@@ -247,7 +247,7 @@ notifications:
 
 ---
 
-## 🔄 Workflow
+## Workflow
 
 1. Create `project.yaml` with your service config
 2. Run `python cli.py init` to generate workflow locally
@@ -257,7 +257,7 @@ notifications:
 
 ---
 
-## 🎓 Complexity Level
+## Complexity Level
 
 **MEDIUM** (5.5/10)
 
@@ -274,13 +274,13 @@ notifications:
 
 ---
 
-## 📝 License
+## License
 
 MIT License - See LICENSE file for details
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! To contribute:
 
@@ -292,7 +292,7 @@ Contributions welcome! To contribute:
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Support for Jenkins and GitLab CI
 - [ ] Database for tracking workflow metadata
@@ -303,7 +303,7 @@ Contributions welcome! To contribute:
 
 ---
 
-## 💡 Tips & Tricks
+## Tips & Tricks
 
 **Generate without git changes:**
 ```bash
@@ -327,7 +327,7 @@ GITHUB_TOKEN=ghp_xxxx python cli.py push --config project.yaml
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 **`FileNotFoundError: project.yaml`**
 - Ensure config file exists in current directory
@@ -345,7 +345,7 @@ GITHUB_TOKEN=ghp_xxxx python cli.py push --config project.yaml
 
 ---
 
-## 📧 Support
+## Support
 
 For issues, questions, or suggestions:
 - Open a GitHub Issue
@@ -354,7 +354,7 @@ For issues, questions, or suggestions:
 
 ---
 
-## ⭐ Show Your Support
+## Show Your Support
 
 If you find CICD Tool helpful, please star the repository!
 
