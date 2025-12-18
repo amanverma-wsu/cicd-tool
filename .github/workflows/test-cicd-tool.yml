@@ -1,0 +1,49 @@
+name: Test CICD Tool
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-workflow-generation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run unit tests
+        run: pytest tests/ -v --tb=short
+      
+      - name: Generate demo workflow
+        run: python cli.py init --config example_project.yaml
+      
+      - name: Verify workflow file exists
+        run: |
+          if [ -f .github/workflows/ci.yml ]; then
+            echo "✓ Workflow file generated successfully"
+            echo "--- Generated workflow ---"
+            cat .github/workflows/ci.yml
+          else
+            echo "✗ Workflow file not found"
+            exit 1
+          fi
+      
+      - name: Test plan command (should show no changes)
+        run: python cli.py plan --config example_project.yaml
+      
+      - name: Upload generated workflow as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-workflow
+          path: .github/workflows/ci.yml
