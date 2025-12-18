@@ -1,4 +1,4 @@
-name: 'CICD Tool'
+name: 'CICD-Tool'
 description: 'Generate GitHub Actions CI/CD workflows from YAML configuration'
 author: 'Aman Verma'
 
