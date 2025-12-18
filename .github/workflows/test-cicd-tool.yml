@@ -24,6 +24,17 @@ jobs:
       - name: Run unit tests
         run: pytest tests/ -v --tb=short
       
+      - name: Create example config
+        run: |
+          cat > example_project.yaml << 'EOF'
+          service: demo-app
+          provider: github
+          repository: amanverma-wsu/cicd-tool
+          branches:
+            - main
+            - develop
+          EOF
+      
       - name: Generate demo workflow
         run: python cli.py init --config example_project.yaml
       
