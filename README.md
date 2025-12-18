@@ -272,11 +272,6 @@ notifications:
 - Test-driven development
 - CI/CD principles
 
----
-
-## License
-
-MIT License - See LICENSE file for details
 
 ---
 
